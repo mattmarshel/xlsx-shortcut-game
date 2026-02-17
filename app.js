@@ -107,7 +107,7 @@ const VISUALS = {
     "Paste": () => `<div class="vis">${visTitleBar('Clipboard')}
         <div class="vis-canvas">
             ${miniGrid()}
-            <div class="vis-selection" style="left:60px;top:20px;width:38px;height:16px;animation:pasteAppear 4s ease-in-out infinite;background:rgba(33,115,70,.12)"></div>
+            <div class="vis-selection" style="left:60px;top:20px;width:38px;height:16px;animation:pasteAppear 4s ease-in-out infinite;background:rgba(34,81,255,.12)"></div>
             <div style="position:absolute;left:65px;top:22px;font-size:6.5px;color:var(--accent);font-weight:600;animation:pasteAppear 4s ease-in-out infinite">Data</div>
             <div style="position:absolute;right:12px;top:70px;font-size:14px;color:var(--accent);animation:visPulse 4s ease-in-out infinite">&#128203;</div>
             <span class="vis-label">PASTE</span>
@@ -137,9 +137,9 @@ const VISUALS = {
     "Copy the format right in a range": () => `<div class="vis">${visTitleBar('Clipboard')}
         <div class="vis-canvas">
             ${miniGrid({cols: 3, cellW: 50})}
-            <div style="position:absolute;left:72px;top:20px;width:50px;height:16px;background:#E6F4EC;border:1px solid var(--accent)"></div>
+            <div style="position:absolute;left:72px;top:20px;width:50px;height:16px;background:#E8EEFF;border:1px solid var(--accent)"></div>
             <div style="position:absolute;left:77px;top:22px;font-size:6px;color:var(--accent);font-weight:600">100</div>
-            <div style="position:absolute;left:122px;top:20px;width:50px;height:16px;animation:pasteAppear 4s ease-in-out infinite;background:#E6F4EC;border:1px solid var(--accent)"></div>
+            <div style="position:absolute;left:122px;top:20px;width:50px;height:16px;animation:pasteAppear 4s ease-in-out infinite;background:#E8EEFF;border:1px solid var(--accent)"></div>
             <div style="position:absolute;left:127px;top:22px;font-size:6px;color:var(--accent);font-weight:600;animation:pasteAppear 4s ease-in-out infinite">100</div>
             <div style="position:absolute;left:100px;top:48px;font-size:12px;color:var(--accent);animation:visPulse 4s ease-in-out infinite">&#8594;</div>
             <span class="vis-label">FILL RIGHT</span>
@@ -148,9 +148,9 @@ const VISUALS = {
     "Copy the format down in a range": () => `<div class="vis">${visTitleBar('Clipboard')}
         <div class="vis-canvas">
             ${miniGrid({cols: 3, cellW: 50})}
-            <div style="position:absolute;left:72px;top:20px;width:50px;height:16px;background:#E6F4EC;border:1px solid var(--accent)"></div>
+            <div style="position:absolute;left:72px;top:20px;width:50px;height:16px;background:#E8EEFF;border:1px solid var(--accent)"></div>
             <div style="position:absolute;left:77px;top:22px;font-size:6px;color:var(--accent);font-weight:600">100</div>
-            <div style="position:absolute;left:72px;top:36px;width:50px;height:16px;animation:pasteAppear 4s ease-in-out infinite;background:#E6F4EC;border:1px solid var(--accent)"></div>
+            <div style="position:absolute;left:72px;top:36px;width:50px;height:16px;animation:pasteAppear 4s ease-in-out infinite;background:#E8EEFF;border:1px solid var(--accent)"></div>
             <div style="position:absolute;left:77px;top:38px;font-size:6px;color:var(--accent);font-weight:600;animation:pasteAppear 4s ease-in-out infinite">100</div>
             <div style="position:absolute;left:140px;top:32px;font-size:12px;color:var(--accent);animation:visPulse 4s ease-in-out infinite">&#8595;</div>
             <span class="vis-label">FILL DOWN</span>
@@ -171,15 +171,15 @@ const VISUALS = {
     // === FORMULAS ===
     "Make absolute reference": () => `<div class="vis">${visTitleBar('Formulas')}
         <div class="vis-canvas">
-            <div style="position:absolute;left:10px;top:4px;right:10px;height:16px;background:white;border:1px solid #C8D4BE;border-radius:2px;display:flex;align-items:center;padding:0 6px">
+            <div style="position:absolute;left:10px;top:4px;right:10px;height:16px;background:white;border:1px solid #D0D5DD;border-radius:2px;display:flex;align-items:center;padding:0 6px">
                 <span style="font-size:5px;color:#888;margin-right:4px">fx</span>
                 <span style="font-size:6px;font-family:monospace;color:var(--accent);font-weight:600">=SUM(</span>
             </div>
             <div style="position:absolute;left:50%;top:38px;transform:translateX(-50%);text-align:center">
                 <div style="display:flex;gap:6px;justify-content:center;margin-bottom:8px">
-                    <div style="padding:4px 8px;background:#E6F4EC;border:1.5px solid var(--accent);border-radius:4px;font-size:8px;font-family:monospace;font-weight:700;color:var(--accent);animation:visPulse 4s ease-in-out infinite">A1</div>
+                    <div style="padding:4px 8px;background:#E8EEFF;border:1.5px solid var(--accent);border-radius:4px;font-size:8px;font-family:monospace;font-weight:700;color:var(--accent);animation:visPulse 4s ease-in-out infinite">A1</div>
                     <div style="font-size:10px;color:#888;display:flex;align-items:center">&#8594;</div>
-                    <div style="padding:4px 8px;background:#E6F4EC;border:1.5px solid var(--accent);border-radius:4px;font-size:8px;font-family:monospace;font-weight:700;color:var(--accent);animation:pasteAppear 4s ease-in-out infinite">$A$1</div>
+                    <div style="padding:4px 8px;background:#E8EEFF;border:1.5px solid var(--accent);border-radius:4px;font-size:8px;font-family:monospace;font-weight:700;color:var(--accent);animation:pasteAppear 4s ease-in-out infinite">$A$1</div>
                 </div>
                 <div style="display:flex;gap:6px;justify-content:center;margin-bottom:4px">
                     <div style="padding:3px 6px;background:#f5f5f5;border:1px solid #ddd;border-radius:3px;font-size:6px;font-family:monospace;color:#666;animation:pasteAppear 4s ease-in-out infinite .3s">A$1</div>
@@ -196,7 +196,7 @@ const VISUALS = {
             <div style="position:absolute;left:27px;top:22px;font-size:5.5px;color:#333">10</div>
             <div style="position:absolute;left:63px;top:22px;font-size:5.5px;color:#333">20</div>
             <div style="position:absolute;left:99px;top:22px;font-size:5.5px;color:#333">30</div>
-            <div style="position:absolute;left:135px;top:20px;width:36px;height:16px;background:#E6F4EC;border:2px solid var(--accent);border-radius:1px;animation:pasteAppear 4s ease-in-out infinite"></div>
+            <div style="position:absolute;left:135px;top:20px;width:36px;height:16px;background:#E8EEFF;border:2px solid var(--accent);border-radius:1px;animation:pasteAppear 4s ease-in-out infinite"></div>
             <div style="position:absolute;left:137px;top:22px;font-size:5.5px;color:var(--accent);font-weight:700;animation:sumFlash 4s ease-in-out infinite">60</div>
             <div style="position:absolute;right:12px;top:65px;font-size:8px;color:var(--accent);font-weight:700">&#931; SUM</div>
             <span class="vis-label">AUTOSUM</span>
@@ -209,7 +209,7 @@ const VISUALS = {
                 <div style="position:absolute;right:0;top:0;width:12px;height:100%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:7px;color:white">&#9660;</div>
             </div>
             <div style="position:absolute;left:72px;top:36px;width:50px;background:white;border:1px solid var(--accent);border-radius:0 0 3px 3px;box-shadow:0 2px 8px rgba(0,0,0,.1);z-index:2;animation:filterDrop 4s ease-in-out infinite;overflow:hidden">
-                <div style="padding:3px 6px;font-size:5.5px;color:#333;background:#E6F4EC">Option A</div>
+                <div style="padding:3px 6px;font-size:5.5px;color:#333;background:#E8EEFF">Option A</div>
                 <div style="padding:3px 6px;font-size:5.5px;color:#333">Option B</div>
                 <div style="padding:3px 6px;font-size:5.5px;color:#333">Option C</div>
             </div>
@@ -218,13 +218,13 @@ const VISUALS = {
 
     "Evaluate formula": () => `<div class="vis">${visTitleBar('Formulas')}
         <div class="vis-canvas">
-            <div style="position:absolute;left:10px;top:8px;right:10px;height:16px;background:white;border:1px solid #C8D4BE;border-radius:2px;display:flex;align-items:center;padding:0 6px">
+            <div style="position:absolute;left:10px;top:8px;right:10px;height:16px;background:white;border:1px solid #D0D5DD;border-radius:2px;display:flex;align-items:center;padding:0 6px">
                 <span style="font-size:5px;color:#888;margin-right:4px">fx</span>
                 <span style="font-size:6px;font-family:monospace;color:var(--accent)">=A1+B1*C1</span>
             </div>
             <div style="position:absolute;left:50%;top:40px;transform:translateX(-50%);text-align:center">
                 <div style="font-size:8px;color:#888;margin-bottom:4px">F9 evaluates to:</div>
-                <div style="padding:6px 16px;background:#E6F4EC;border:2px solid var(--accent);border-radius:6px;font-size:12px;font-weight:800;color:var(--accent);animation:pasteAppear 4s ease-in-out infinite">42</div>
+                <div style="padding:6px 16px;background:#E8EEFF;border:2px solid var(--accent);border-radius:6px;font-size:12px;font-weight:800;color:var(--accent);animation:pasteAppear 4s ease-in-out infinite">42</div>
             </div>
             <span class="vis-label">EVALUATE</span>
         </div></div>`,
@@ -244,14 +244,14 @@ const VISUALS = {
 
     "Insert range name": () => `<div class="vis">${visTitleBar('Formulas')}
         <div class="vis-canvas">
-            <div style="position:absolute;left:10px;top:8px;right:10px;height:16px;background:white;border:1px solid #C8D4BE;border-radius:2px;display:flex;align-items:center;padding:0 6px">
+            <div style="position:absolute;left:10px;top:8px;right:10px;height:16px;background:white;border:1px solid #D0D5DD;border-radius:2px;display:flex;align-items:center;padding:0 6px">
                 <span style="font-size:5px;color:#888;margin-right:4px">fx</span>
                 <span style="font-size:6px;font-family:monospace;color:var(--accent)">=SUM(</span>
                 <span style="font-size:6px;font-family:monospace;color:var(--accent);font-weight:700;animation:pasteAppear 4s ease-in-out infinite">SalesData</span>
                 <span style="font-size:6px;font-family:monospace;color:var(--accent)">)</span>
             </div>
             <div style="position:absolute;left:30px;top:35px;width:90px;background:white;border:1px solid var(--accent);border-radius:3px;box-shadow:0 2px 8px rgba(0,0,0,.1);animation:insertAppear 4s ease-in-out infinite">
-                <div style="padding:3px 6px;font-size:5.5px;color:var(--accent);font-weight:600;background:#E6F4EC">SalesData</div>
+                <div style="padding:3px 6px;font-size:5.5px;color:var(--accent);font-weight:600;background:#E8EEFF">SalesData</div>
                 <div style="padding:3px 6px;font-size:5.5px;color:#333">Revenue</div>
                 <div style="padding:3px 6px;font-size:5.5px;color:#333">Costs</div>
             </div>
@@ -277,7 +277,7 @@ const VISUALS = {
             <div style="position:absolute;left:77px;top:22px;font-size:5.5px;color:#333;animation:deleteContent 4s ease-in-out infinite .1s">Sales</div>
             <div style="position:absolute;left:27px;top:38px;font-size:5.5px;color:#333;animation:deleteContent 4s ease-in-out infinite .2s">78</div>
             <div style="position:absolute;left:77px;top:38px;font-size:5.5px;color:#333;animation:deleteContent 4s ease-in-out infinite .3s">Revenue</div>
-            <div style="position:absolute;left:22px;top:20px;width:105px;height:32px;border:2px solid var(--accent);background:rgba(33,115,70,.06)"></div>
+            <div style="position:absolute;left:22px;top:20px;width:105px;height:32px;border:2px solid var(--accent);background:rgba(34,81,255,.06)"></div>
             <span class="vis-label">DELETE VALUES</span>
         </div></div>`,
 
@@ -355,7 +355,7 @@ const VISUALS = {
     "Show cell content": () => `<div class="vis">${visTitleBar('Editing')}
         <div class="vis-canvas">
             ${miniGrid({cols: 3, cellW: 50})}
-            <div style="position:absolute;left:72px;top:20px;width:50px;height:16px;border:2px solid var(--accent);background:rgba(33,115,70,.08)"></div>
+            <div style="position:absolute;left:72px;top:20px;width:50px;height:16px;border:2px solid var(--accent);background:rgba(34,81,255,.08)"></div>
             <div style="position:absolute;left:77px;top:22px;font-size:6px;color:#333">42</div>
             <div style="position:absolute;left:10px;top:62px;right:10px;height:16px;background:white;border:1px solid var(--accent);border-radius:2px;display:flex;align-items:center;padding:0 6px;animation:insertAppear 4s ease-in-out infinite">
                 <span style="font-size:5px;color:#888;margin-right:4px">fx</span>
@@ -391,7 +391,7 @@ const VISUALS = {
             <div style="position:absolute;left:27px;top:22px;font-size:5.5px;color:var(--accent);font-weight:600">Name &#9660;</div>
             <div style="position:absolute;left:77px;top:22px;font-size:5.5px;color:var(--accent);font-weight:600">Sales &#9660;</div>
             <div style="position:absolute;left:127px;top:22px;font-size:5.5px;color:var(--accent);font-weight:600">Date &#9660;</div>
-            <div style="position:absolute;left:22px;top:20px;width:155px;height:16px;background:rgba(33,115,70,.08);animation:cellHighlight 4s ease-in-out infinite"></div>
+            <div style="position:absolute;left:22px;top:20px;width:155px;height:16px;background:rgba(34,81,255,.08);animation:cellHighlight 4s ease-in-out infinite"></div>
             <span class="vis-label">AUTO FILTER</span>
         </div></div>`,
 
@@ -440,7 +440,7 @@ const VISUALS = {
     "Close application": () => `<div class="vis">${visTitleBar('File')}
         <div class="vis-canvas" style="display:flex;align-items:center;justify-content:center">
             <div style="width:120px;height:70px;background:white;border:1.5px solid #ddd;border-radius:6px;position:relative;animation:removeItem 4s ease-in-out infinite">
-                <div style="height:14px;background:linear-gradient(90deg,#185A36,#217346);border-radius:4px 4px 0 0;display:flex;align-items:center;padding:0 4px">
+                <div style="height:14px;background:linear-gradient(90deg,#061F79,#2251FF);border-radius:4px 4px 0 0;display:flex;align-items:center;padding:0 4px">
                     <span style="font-size:5px;color:white">Excel</span>
                     <div style="margin-left:auto;width:10px;height:8px;background:#C62828;border-radius:1px;display:flex;align-items:center;justify-content:center;font-size:6px;color:white;font-weight:700">&#215;</div>
                 </div>
@@ -465,7 +465,7 @@ const VISUALS = {
     "Select and show A1": () => `<div class="vis">${visTitleBar('Navigation')}
         <div class="vis-canvas">
             ${miniGrid({cols: 4, rows: 4, cellW: 34})}
-            <div class="vis-selection" style="width:34px;height:16px;animation:jumpToA1 4s ease-in-out infinite;background:rgba(33,115,70,.12)"></div>
+            <div class="vis-selection" style="width:34px;height:16px;animation:jumpToA1 4s ease-in-out infinite;background:rgba(34,81,255,.12)"></div>
             <div style="position:absolute;right:10px;top:75px;font-size:7px;color:var(--accent);font-weight:700;animation:visPulse 4s ease-in-out infinite">&#8598; A1</div>
             <span class="vis-label">GO TO A1</span>
         </div></div>`,
@@ -473,7 +473,7 @@ const VISUALS = {
     "Select last used cell": () => `<div class="vis">${visTitleBar('Navigation')}
         <div class="vis-canvas">
             ${miniGrid({cols: 4, rows: 4, cellW: 34})}
-            <div class="vis-selection" style="width:34px;height:16px;animation:jumpToEnd 4s ease-in-out infinite;background:rgba(33,115,70,.12)"></div>
+            <div class="vis-selection" style="width:34px;height:16px;animation:jumpToEnd 4s ease-in-out infinite;background:rgba(34,81,255,.12)"></div>
             <div style="position:absolute;right:10px;top:75px;font-size:7px;color:var(--accent);font-weight:700;animation:visPulse 4s ease-in-out infinite">&#8600; End</div>
             <span class="vis-label">GO TO END</span>
         </div></div>`,
@@ -496,7 +496,7 @@ const VISUALS = {
     "Move to edge of data region": () => `<div class="vis">${visTitleBar('Navigation')}
         <div class="vis-canvas">
             ${miniGrid({cols: 4, rows: 4, cellW: 34})}
-            <div class="vis-selection" style="left:22px;top:18px;width:34px;height:16px;animation:moveSelection 4s ease-in-out infinite;background:rgba(33,115,70,.12)"></div>
+            <div class="vis-selection" style="left:22px;top:18px;width:34px;height:16px;animation:moveSelection 4s ease-in-out infinite;background:rgba(34,81,255,.12)"></div>
             <div style="position:absolute;left:80px;top:60px;font-size:16px;color:var(--accent);animation:visPulse 4s ease-in-out infinite">&#8680;</div>
             <span class="vis-label">JUMP TO EDGE</span>
         </div></div>`,
@@ -519,7 +519,7 @@ const VISUALS = {
     "Select range": () => `<div class="vis">${visTitleBar('Selection')}
         <div class="vis-canvas">
             ${miniGrid({cols: 4, rows: 4, cellW: 34})}
-            <div style="position:absolute;left:22px;top:18px;background:rgba(33,115,70,.12);border:2px solid var(--accent);animation:expandSelection 4s ease-in-out infinite"></div>
+            <div style="position:absolute;left:22px;top:18px;background:rgba(34,81,255,.12);border:2px solid var(--accent);animation:expandSelection 4s ease-in-out infinite"></div>
             <div style="position:absolute;right:10px;top:75px;font-size:6px;color:var(--accent);font-weight:600">Shift+Arrow</div>
             <span class="vis-label">SELECT RANGE</span>
         </div></div>`,
@@ -527,7 +527,7 @@ const VISUALS = {
     "Select rows or columns": () => `<div class="vis">${visTitleBar('Selection')}
         <div class="vis-canvas">
             ${miniGrid({cols: 4, rows: 4, cellW: 34})}
-            <div style="position:absolute;left:56px;top:18px;width:34px;height:64px;background:rgba(33,115,70,.15);border:2px solid var(--accent);animation:cellHighlight 4s ease-in-out infinite"></div>
+            <div style="position:absolute;left:56px;top:18px;width:34px;height:64px;background:rgba(34,81,255,.15);border:2px solid var(--accent);animation:cellHighlight 4s ease-in-out infinite"></div>
             <div style="position:absolute;right:8px;top:75px;font-size:6px;color:var(--accent);font-weight:600">Column B</div>
             <span class="vis-label">SELECT COL</span>
         </div></div>`,
@@ -535,7 +535,7 @@ const VISUALS = {
     "Select rows": () => `<div class="vis">${visTitleBar('Selection')}
         <div class="vis-canvas">
             ${miniGrid({cols: 4, rows: 4, cellW: 34})}
-            <div style="position:absolute;left:22px;top:34px;width:136px;height:16px;background:rgba(33,115,70,.15);border:2px solid var(--accent);animation:cellHighlight 4s ease-in-out infinite"></div>
+            <div style="position:absolute;left:22px;top:34px;width:136px;height:16px;background:rgba(34,81,255,.15);border:2px solid var(--accent);animation:cellHighlight 4s ease-in-out infinite"></div>
             <div style="position:absolute;right:8px;top:75px;font-size:6px;color:var(--accent);font-weight:600">Row 2</div>
             <span class="vis-label">SELECT ROW</span>
         </div></div>`,
@@ -543,8 +543,8 @@ const VISUALS = {
     "Select visible cells only": () => `<div class="vis">${visTitleBar('Selection')}
         <div class="vis-canvas">
             ${miniGrid({cols: 3, rows: 4, cellW: 42, startX: 14})}
-            <div style="position:absolute;left:28px;top:20px;width:126px;height:16px;background:rgba(33,115,70,.12);border:1px solid var(--accent)"></div>
-            <div style="position:absolute;left:28px;top:52px;width:126px;height:16px;background:rgba(33,115,70,.12);border:1px solid var(--accent)"></div>
+            <div style="position:absolute;left:28px;top:20px;width:126px;height:16px;background:rgba(34,81,255,.12);border:1px solid var(--accent)"></div>
+            <div style="position:absolute;left:28px;top:52px;width:126px;height:16px;background:rgba(34,81,255,.12);border:1px solid var(--accent)"></div>
             <div style="position:absolute;left:28px;top:36px;width:126px;height:16px;background:#f0f0f0;border:1px dashed #aaa;display:flex;align-items:center;justify-content:center;font-size:5px;color:#aaa">hidden</div>
             <div style="position:absolute;right:8px;top:78px;font-size:5.5px;color:var(--accent);font-weight:600">Visible only</div>
             <span class="vis-label">VISIBLE CELLS</span>
@@ -553,7 +553,7 @@ const VISUALS = {
     "Select all surrounding cells": () => `<div class="vis">${visTitleBar('Selection')}
         <div class="vis-canvas">
             ${miniGrid({cols: 4, rows: 4, cellW: 34})}
-            <div style="position:absolute;left:22px;top:18px;background:rgba(33,115,70,.12);border:2px solid var(--accent);animation:selectAll 4s ease-in-out infinite"></div>
+            <div style="position:absolute;left:22px;top:18px;background:rgba(34,81,255,.12);border:2px solid var(--accent);animation:selectAll 4s ease-in-out infinite"></div>
             <div style="position:absolute;right:8px;top:78px;font-size:6px;color:var(--accent);font-weight:600">Select All</div>
             <span class="vis-label">CTRL+A</span>
         </div></div>`,
@@ -578,7 +578,7 @@ const VISUALS = {
             <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:150px;background:white;border:1.5px solid var(--accent);border-radius:6px;box-shadow:0 4px 16px rgba(0,0,0,.1);animation:dialogPop 4s ease-in-out infinite">
                 <div style="background:var(--accent);padding:4px 8px;border-radius:4px 4px 0 0;font-size:6px;color:white;font-weight:600">Format Cells</div>
                 <div style="display:flex;gap:1px;padding:3px 6px;border-bottom:1px solid #eee">
-                    <span style="font-size:4.5px;padding:2px 4px;background:#E6F4EC;border-radius:2px;color:var(--accent);font-weight:600">Number</span>
+                    <span style="font-size:4.5px;padding:2px 4px;background:#E8EEFF;border-radius:2px;color:var(--accent);font-weight:600">Number</span>
                     <span style="font-size:4.5px;padding:2px 4px;color:#888">Alignment</span>
                     <span style="font-size:4.5px;padding:2px 4px;color:#888">Font</span>
                     <span style="font-size:4.5px;padding:2px 4px;color:#888">Border</span>
@@ -602,8 +602,8 @@ const VISUALS = {
         <div class="vis-canvas" style="display:flex;align-items:center;justify-content:center;gap:8px">
             <div style="display:flex;flex-direction:column;gap:4px;animation:visPulse 4s ease-in-out infinite">
                 <div style="padding:3px 8px;background:var(--accent);border-radius:3px;font-size:6px;color:white;font-weight:700">Heading 1</div>
-                <div style="padding:3px 8px;background:#4CAF50;border-radius:3px;font-size:5.5px;color:white;font-weight:600">Heading 2</div>
-                <div style="padding:3px 8px;background:#81C784;border-radius:3px;font-size:5px;color:white">Heading 3</div>
+                <div style="padding:3px 8px;background:#4A73FF;border-radius:3px;font-size:5.5px;color:white;font-weight:600">Heading 2</div>
+                <div style="padding:3px 8px;background:#6B8FFF;border-radius:3px;font-size:5px;color:white">Heading 3</div>
             </div>
             <div style="font-size:20px;color:var(--accent);animation:visPulse 2s ease infinite">&#8635;</div>
             <span class="vis-label">CYCLE HEADING</span>
@@ -624,7 +624,7 @@ const VISUALS = {
         <div class="vis-canvas">
             <div style="position:absolute;left:20px;top:20px;text-align:center">
                 <div style="font-size:6px;color:#888;margin-bottom:3px">BEFORE:</div>
-                <div style="padding:4px 10px;background:#E6F4EC;border:2px solid var(--accent);border-radius:4px">
+                <div style="padding:4px 10px;background:#E8EEFF;border:2px solid var(--accent);border-radius:4px">
                     <span style="font-size:8px;font-weight:700;color:var(--accent);font-style:italic">$1,234</span>
                 </div>
             </div>
@@ -662,7 +662,7 @@ const VISUALS = {
     "Insert time": () => `<div class="vis">${visTitleBar('Insert')}
         <div class="vis-canvas">
             ${miniGrid({cols: 3, cellW: 50})}
-            <div style="position:absolute;left:72px;top:20px;width:50px;height:16px;border:2px solid var(--accent);background:rgba(33,115,70,.08);animation:cellHighlight 4s ease-in-out infinite"></div>
+            <div style="position:absolute;left:72px;top:20px;width:50px;height:16px;border:2px solid var(--accent);background:rgba(34,81,255,.08);animation:cellHighlight 4s ease-in-out infinite"></div>
             <div style="position:absolute;left:75px;top:22px;font-size:6px;color:var(--accent);font-weight:600;animation:pasteAppear 4s ease-in-out infinite">14:30:00</div>
             <div style="position:absolute;right:15px;top:60px;font-size:16px;color:var(--accent);animation:visPulse 4s ease-in-out infinite">&#128339;</div>
             <span class="vis-label">INSERT TIME</span>
@@ -671,7 +671,7 @@ const VISUALS = {
     "Insert date": () => `<div class="vis">${visTitleBar('Insert')}
         <div class="vis-canvas">
             ${miniGrid({cols: 3, cellW: 50})}
-            <div style="position:absolute;left:72px;top:20px;width:50px;height:16px;border:2px solid var(--accent);background:rgba(33,115,70,.08);animation:cellHighlight 4s ease-in-out infinite"></div>
+            <div style="position:absolute;left:72px;top:20px;width:50px;height:16px;border:2px solid var(--accent);background:rgba(34,81,255,.08);animation:cellHighlight 4s ease-in-out infinite"></div>
             <div style="position:absolute;left:74px;top:22px;font-size:5.5px;color:var(--accent);font-weight:600;animation:pasteAppear 4s ease-in-out infinite">2/9/2026</div>
             <div style="position:absolute;right:15px;top:60px;font-size:16px;color:var(--accent);animation:visPulse 4s ease-in-out infinite">&#128197;</div>
             <span class="vis-label">INSERT DATE</span>
@@ -695,7 +695,7 @@ const VISUALS = {
                     <div style="width:40px;height:14px;background:var(--accent);border:1px solid var(--accent-dark);font-size:5px;color:white;display:flex;align-items:center;justify-content:center;font-weight:600">Q1</div>
                 </div>
                 ${[0,1,2].map(r => `<div style="display:flex">
-                    ${[0,1,2].map(c => `<div style="width:40px;height:12px;background:${r%2===0?'#E6F4EC':'white'};border:1px solid #C8D4BE;font-size:4.5px;display:flex;align-items:center;justify-content:center;color:#333">${['Alice','100','Q1','Bob','200','Q2','Carol','300','Q3'][r*3+c]}</div>`).join('')}
+                    ${[0,1,2].map(c => `<div style="width:40px;height:12px;background:${r%2===0?'#E8EEFF':'white'};border:1px solid #D0D5DD;font-size:4.5px;display:flex;align-items:center;justify-content:center;color:#333">${['Alice','100','Q1','Bob','200','Q2','Carol','300','Q3'][r*3+c]}</div>`).join('')}
                 </div>`).join('')}
             </div>
             <span class="vis-label">TABLE</span>
@@ -718,7 +718,7 @@ const VISUALS = {
     "Insert cell/range/row/column": () => `<div class="vis">${visTitleBar('Insert')}
         <div class="vis-canvas">
             ${miniGrid({cols: 3, rows: 3, cellW: 50})}
-            <div style="position:absolute;left:72px;top:36px;width:50px;height:16px;background:rgba(33,115,70,.1);border:2px solid var(--accent);animation:insertAppear 4s ease-in-out infinite"></div>
+            <div style="position:absolute;left:72px;top:36px;width:50px;height:16px;background:rgba(34,81,255,.1);border:2px solid var(--accent);animation:insertAppear 4s ease-in-out infinite"></div>
             <div style="position:absolute;left:72px;top:52px;width:50px;height:16px;animation:slideDown 4s ease-in-out infinite">
                 <div style="font-size:5.5px;color:#888;padding-left:5px;padding-top:2px">old data</div>
             </div>
@@ -749,9 +749,9 @@ const VISUALS = {
             </div>
             <div style="position:absolute;left:50%;top:30px;transform:translate(-50%,0);text-align:center">
                 <div style="display:flex;gap:12px;align-items:center;margin-bottom:6px">
-                    <div style="padding:3px 8px;background:#E6F4EC;border:1px solid var(--accent);border-radius:3px;font-size:6px;color:var(--accent)">Sheet1</div>
+                    <div style="padding:3px 8px;background:#E8EEFF;border:1px solid var(--accent);border-radius:3px;font-size:6px;color:var(--accent)">Sheet1</div>
                     <div style="font-size:12px;color:var(--accent);animation:visPulse 4s ease-in-out infinite">&#8594;</div>
-                    <div style="padding:3px 8px;background:#E6F4EC;border:1px solid var(--accent);border-radius:3px;font-size:6px;color:var(--accent);animation:insertAppear 4s ease-in-out infinite">Sheet1 (2)</div>
+                    <div style="padding:3px 8px;background:#E8EEFF;border:1px solid var(--accent);border-radius:3px;font-size:6px;color:var(--accent);animation:insertAppear 4s ease-in-out infinite">Sheet1 (2)</div>
                 </div>
                 <div style="font-size:5.5px;color:#888">Move or create a copy</div>
             </div>
@@ -761,14 +761,14 @@ const VISUALS = {
     "Rename sheet": () => `<div class="vis">${visTitleBar('Sheet')}
         <div class="vis-canvas">
             <div style="position:absolute;bottom:8px;left:10px;display:flex;gap:2px;align-items:flex-end">
-                <div class="vis-tab" style="border:2px solid var(--accent);color:var(--accent);font-weight:600;background:#E6F4EC">
+                <div class="vis-tab" style="border:2px solid var(--accent);color:var(--accent);font-weight:600;background:#E8EEFF">
                     <span style="animation:visPulse 4s ease-in-out infinite">Sales Q1</span>
                 </div>
                 <div class="vis-tab">Sheet2</div>
             </div>
             <div style="position:absolute;left:50%;top:28px;transform:translateX(-50%);text-align:center">
                 <div style="font-size:7px;color:#888;margin-bottom:6px">Sheet1 &#8594;</div>
-                <div style="padding:4px 12px;background:#E6F4EC;border:2px solid var(--accent);border-radius:4px;font-size:8px;color:var(--accent);font-weight:700;animation:pasteAppear 4s ease-in-out infinite">Sales Q1</div>
+                <div style="padding:4px 12px;background:#E8EEFF;border:2px solid var(--accent);border-radius:4px;font-size:8px;color:var(--accent);font-weight:700;animation:pasteAppear 4s ease-in-out infinite">Sales Q1</div>
             </div>
             <span class="vis-label">RENAME</span>
         </div></div>`,
@@ -782,7 +782,7 @@ const VISUALS = {
                     <div class="vis-ribbon-btn" style="font-weight:700">B</div>
                     <div class="vis-ribbon-btn" style="font-style:italic">I</div>
                     <div class="vis-ribbon-btn" style="text-decoration:underline">U</div>
-                    <div style="width:1px;height:8px;background:#C8D4BE;margin:0 2px"></div>
+                    <div style="width:1px;height:8px;background:#D0D5DD;margin:0 2px"></div>
                     <div class="vis-ribbon-btn">&#9783;</div>
                     <div class="vis-ribbon-btn">&#9776;</div>
                 </div>
@@ -801,9 +801,9 @@ const VISUALS = {
                 <div style="padding:6px 8px;text-align:center">
                     <div style="font-size:18px;font-weight:800;color:var(--accent)">100%</div>
                     <div style="display:flex;justify-content:center;gap:8px;margin-top:4px">
-                        <span style="font-size:5px;padding:2px 6px;background:#E6F4EC;border-radius:2px;color:var(--accent)">75%</span>
-                        <span style="font-size:5px;padding:2px 6px;background:#E6F4EC;border-radius:2px;color:var(--accent);font-weight:700;border:1px solid var(--accent)">100%</span>
-                        <span style="font-size:5px;padding:2px 6px;background:#E6F4EC;border-radius:2px;color:var(--accent)">200%</span>
+                        <span style="font-size:5px;padding:2px 6px;background:#E8EEFF;border-radius:2px;color:var(--accent)">75%</span>
+                        <span style="font-size:5px;padding:2px 6px;background:#E8EEFF;border-radius:2px;color:var(--accent);font-weight:700;border:1px solid var(--accent)">100%</span>
+                        <span style="font-size:5px;padding:2px 6px;background:#E8EEFF;border-radius:2px;color:var(--accent)">200%</span>
                     </div>
                 </div>
             </div>
@@ -845,9 +845,9 @@ const VISUALS = {
         <div class="vis-canvas" style="display:flex;align-items:center;justify-content:center">
             <div style="text-align:center">
                 <div style="display:flex;gap:4px;margin-bottom:6px;justify-content:center">
-                    <div style="width:22px;height:18px;background:#E6F4EC;border:1.5px solid #B8D8C5;border-radius:3px;font-size:6px;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);animation:insertAppear 4s ease-in-out infinite">&#9000;</div>
-                    <div style="width:22px;height:18px;background:#E6F4EC;border:1.5px solid #B8D8C5;border-radius:3px;font-size:6px;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);animation:insertAppear 4s ease-in-out infinite .2s">&#8997;</div>
-                    <div style="width:22px;height:18px;background:#E6F4EC;border:1.5px solid #B8D8C5;border-radius:3px;font-size:6px;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);animation:insertAppear 4s ease-in-out infinite .4s">Q</div>
+                    <div style="width:22px;height:18px;background:#E8EEFF;border:1.5px solid #B8CAFF;border-radius:3px;font-size:6px;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);animation:insertAppear 4s ease-in-out infinite">&#9000;</div>
+                    <div style="width:22px;height:18px;background:#E8EEFF;border:1.5px solid #B8CAFF;border-radius:3px;font-size:6px;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);animation:insertAppear 4s ease-in-out infinite .2s">&#8997;</div>
+                    <div style="width:22px;height:18px;background:#E8EEFF;border:1.5px solid #B8CAFF;border-radius:3px;font-size:6px;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);animation:insertAppear 4s ease-in-out infinite .4s">Q</div>
                 </div>
                 <div style="font-size:6px;color:#888">Show all shortcuts</div>
             </div>
@@ -956,9 +956,9 @@ function addSVGDefs() {
         gradient.setAttribute('x1', '0%'); gradient.setAttribute('y1', '0%');
         gradient.setAttribute('x2', '100%'); gradient.setAttribute('y2', '100%');
         const stop1 = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
-        stop1.setAttribute('offset', '0%'); stop1.setAttribute('stop-color', '#217346');
+        stop1.setAttribute('offset', '0%'); stop1.setAttribute('stop-color', '#2251FF');
         const stop2 = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
-        stop2.setAttribute('offset', '100%'); stop2.setAttribute('stop-color', '#4CAF50');
+        stop2.setAttribute('offset', '100%'); stop2.setAttribute('stop-color', '#4A73FF');
         gradient.appendChild(stop1); gradient.appendChild(stop2);
         defs.appendChild(gradient); svg.insertBefore(defs, svg.firstChild);
     }
