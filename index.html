@@ -66,7 +66,7 @@
         <!-- DASHBOARD VIEW -->
         <section id="dashboard" class="view active">
             <div class="dashboard-hero">
-                <h2>Master Excel Shortcuts in One Day</h2>
+                <h2>Master 91 Excel Shortcuts Today</h2>
                 <p>Learn, practice, and test your knowledge with four interactive modes.</p>
             </div>
 
@@ -233,6 +233,13 @@
                 <div class="key-input-area">
                     <div class="key-display" id="keyDisplay">
                         <span class="key-placeholder">Press the shortcut keys...</span>
+                    </div>
+                    <div class="type-fallback">
+                        <span class="type-fallback-label">Browser intercepting keys? Type it instead:</span>
+                        <div class="type-fallback-row">
+                            <input type="text" id="typeFallback" placeholder="e.g. Ctrl+T" autocomplete="off" spellcheck="false">
+                            <button class="btn-secondary" id="submitTyped">Submit</button>
+                        </div>
                     </div>
                 </div>
                 <div class="practice-feedback" id="practiceFeedback"></div>

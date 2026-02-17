@@ -11,10 +11,9 @@ const SHORTCUTS = [
     { title: "Copy the format right in a range", key: "Ctrl+R", category: "Clipboard", mustHave: true },
     { title: "Copy the format down in a range", key: "Ctrl+D", category: "Clipboard", mustHave: true },
     { title: "Copy formulas", key: "Ctrl+Enter", category: "Clipboard", mustHave: true },
-    { title: "Make absolute reference", key: "F4", category: "Formulas", mustHave: true },
+    { title: "Cycle absolute and relative references", key: "F4", category: "Formulas", mustHave: true },
     { title: "Sum rows", key: "Alt+=", category: "Formulas", mustHave: true },
     { title: "Open data validation list", key: "Alt+Down", category: "Data", mustHave: true },
-    { title: "Evaluate formula", key: "F9 in a cell", category: "Formulas", mustHave: true },
     { title: "Insert or Modify comment", key: "Shift+F2", category: "Insert" },
     { title: "Clear range values", key: "Del", category: "Editing", mustHave: true },
     { title: "Undo last action", key: "Ctrl+Z", category: "Editing", mustHave: true },
@@ -22,16 +21,16 @@ const SHORTCUTS = [
     { title: "Open 'Name Range' dialog", key: "Ctrl+F3", category: "Formulas" },
     { title: "Open file", key: "Ctrl+O", category: "File" },
     { title: "Print", key: "Ctrl+P", category: "File" },
-    { title: "Save", key: "Ctrl+S", category: "File", mustHave: true },
+    { title: "Save", key: "Ctrl+S", category: "File" },
     { title: "Group rows or columns", key: "Alt+D+G+G", category: "Data", mustHave: true },
     { title: "Ungroup rows or columns", key: "Alt+D+G+U", category: "Data", mustHave: true },
-    { title: "Insert or remove auto filter", key: "Alt+D+F+F", category: "Data", mustHave: true },
-    { title: "Show all rows in autofiltered table", key: "Alt+D+F+S", category: "Data" },
+    { title: "Turn on/off autofilter", key: "Alt+A T", category: "Data", mustHave: true },
+    { title: "Show all (remove existing filters)", key: "Alt+A C", category: "Data" },
     { title: "Find", key: "Ctrl+F", category: "Editing", mustHave: true },
     { title: "Select and show A1", key: "Ctrl+Home", category: "Navigation", mustHave: true },
     { title: "Select last used cell", key: "Ctrl+End", category: "Navigation", mustHave: true },
     { title: "Select range", key: "Shift+Arrow", category: "Selection", mustHave: true },
-    { title: "Select rows or columns", key: "Ctrl+Space", category: "Selection", mustHave: true },
+    { title: "Select entire column", key: "Ctrl+Space", category: "Selection", mustHave: true },
     { title: "Select rows", key: "Ctrl+Shift", category: "Selection" },
     { title: "Select visible cells only", key: "Alt+;", category: "Selection", mustHave: true },
     { title: "Select all surrounding cells", key: "Ctrl+A", category: "Selection", mustHave: true },
@@ -45,13 +44,13 @@ const SHORTCUTS = [
     { title: "Currency format", key: "Ctrl+$", category: "Formatting" },
     { title: "Italic", key: "Ctrl+I", category: "Formatting" },
     { title: "Underline", key: "Ctrl+U", category: "Formatting" },
-    { title: "Bold", key: "Ctrl+B", category: "Formatting", mustHave: true },
+    { title: "Bold", key: "Ctrl+B", category: "Formatting" },
     { title: "Percentage format", key: "Ctrl+Shift+%", category: "Formatting", mustHave: true },
     { title: "Insert time", key: "Ctrl+:", category: "Insert" },
-    { title: "Delete cell/range/row/column", key: "Ctrl+Shift+-", category: "Insert", mustHave: true },
+    { title: "Delete selected cells", key: "Ctrl+-", category: "Insert", mustHave: true },
     { title: "Insert table", key: "Ctrl+T", category: "Insert", mustHave: true },
     { title: "Insert sheet", key: "Shift+F11", category: "Insert" },
-    { title: "Insert cell/range/row/column", key: "Ctrl+Shift++", category: "Insert", mustHave: true },
+    { title: "Insert selected cells", key: "Ctrl++", category: "Insert", mustHave: true },
     { title: "Insert date", key: "Ctrl+;", category: "Insert" },
     { title: "Insert range name", key: "F3", category: "Formulas" },
     { title: "Move to right sheet", key: "Ctrl+Page Down", category: "Navigation", mustHave: true },
@@ -62,7 +61,7 @@ const SHORTCUTS = [
     { title: "Spellcheck", key: "F7", category: "Editing" },
     { title: "Delete sheet", key: "Alt+E+L", category: "Sheet" },
     { title: "Move or copy sheet", key: "Alt+E+M", category: "Sheet" },
-    { title: "Rename sheet", key: "Alt+O+H+R", category: "Sheet", mustHave: true },
+    { title: "Change sheet name", key: "Alt+H O R", category: "Sheet" },
     { title: "Show cell content", key: "F2", category: "Editing", mustHave: true },
     { title: "Hide or show ribbon", key: "Ctrl+F1", category: "View" },
     { title: "Open zoom dialog", key: "Alt+V+Z", category: "View" },
@@ -71,7 +70,32 @@ const SHORTCUTS = [
     { title: "Open Windows Explorer", key: "Window+E", category: "System" },
     { title: "Close window", key: "Ctrl+W", category: "File" },
     { title: "Show desktop", key: "Window+D", category: "System" },
-    { title: "Open this list of keyboard shortcuts", key: "Ctrl+Alt+Q", category: "System" }
+    { title: "Open this list of keyboard shortcuts", key: "Ctrl+Alt+Q", category: "System" },
+    { title: "Switch between open items", key: "Alt+Tab", category: "System" },
+    { title: "New File", key: "Ctrl+N", category: "File", mustHave: true },
+    { title: "Save As", key: "F12", category: "File" },
+    { title: "Move one screen up/down", key: "PageUp / PageDown", category: "Navigation" },
+    { title: "Move one screen left/right", key: "Alt+PageUp / PageDown", category: "Navigation" },
+    { title: "Select between current cell and navigation result", key: "Shift+Navigation key", category: "Selection" },
+    { title: "Select entire row", key: "Shift+Spacebar", category: "Selection", mustHave: true },
+    { title: "Delete", key: "Alt+H, D, D", category: "Editing" },
+    { title: "Insert Row", key: "Alt+H, I, R", category: "Insert", mustHave: true },
+    { title: "Insert Column", key: "Alt+H, I, C", category: "Insert", mustHave: true },
+    { title: "Hide column/row", key: "Ctrl+0 / 9", category: "View", mustHave: true },
+    { title: "Unhide column/row", key: "Ctrl+Shift+0 / 9", category: "View" },
+    { title: "Calculate entire file", key: "F9", category: "Formulas" },
+    { title: "Calculate active sheet only", key: "Shift+F9", category: "Formulas" },
+    { title: "Toggle formula bar", key: "Ctrl+Shift+U", category: "View" },
+    { title: "Paste Special", key: "Ctrl+Alt+V", category: "Clipboard", mustHave: true },
+    { title: "Copy exact formula from above", key: "Ctrl+'", category: "Formulas" },
+    { title: "Insert PivotTable", key: "Alt+N V T", category: "Data" },
+    { title: "Format Cells", key: "Ctrl+1", category: "Formatting", mustHave: true },
+    { title: "General number format", key: "Ctrl+Shift+~", category: "Formatting" },
+    { title: "Format Font Dialog Box", key: "Ctrl+Shift+F", category: "Formatting" },
+    { title: "Auto fit column", key: "Alt+H, O, I", category: "Formatting" },
+    { title: "Auto fit row", key: "Alt+H, O, A", category: "Formatting" },
+    { title: "Decrease decimals", key: "Alt+H, 9", category: "Formatting" },
+    { title: "Increase decimals", key: "Alt+H, 0", category: "Formatting" }
 ];
 
 const CATEGORIES = [...new Set(SHORTCUTS.map(s => s.category))];
@@ -169,7 +193,7 @@ const VISUALS = {
         </div></div>`,
 
     // === FORMULAS ===
-    "Make absolute reference": () => `<div class="vis">${visTitleBar('Formulas')}
+    "Cycle absolute and relative references": () => `<div class="vis">${visTitleBar('Formulas')}
         <div class="vis-canvas">
             <div style="position:absolute;left:10px;top:4px;right:10px;height:16px;background:white;border:1px solid #D0D5DD;border-radius:2px;display:flex;align-items:center;padding:0 6px">
                 <span style="font-size:5px;color:#888;margin-right:4px">fx</span>
@@ -214,19 +238,6 @@ const VISUALS = {
                 <div style="padding:3px 6px;font-size:5.5px;color:#333">Option C</div>
             </div>
             <span class="vis-label">VALIDATION LIST</span>
-        </div></div>`,
-
-    "Evaluate formula": () => `<div class="vis">${visTitleBar('Formulas')}
-        <div class="vis-canvas">
-            <div style="position:absolute;left:10px;top:8px;right:10px;height:16px;background:white;border:1px solid #D0D5DD;border-radius:2px;display:flex;align-items:center;padding:0 6px">
-                <span style="font-size:5px;color:#888;margin-right:4px">fx</span>
-                <span style="font-size:6px;font-family:monospace;color:var(--accent)">=A1+B1*C1</span>
-            </div>
-            <div style="position:absolute;left:50%;top:40px;transform:translateX(-50%);text-align:center">
-                <div style="font-size:8px;color:#888;margin-bottom:4px">F9 evaluates to:</div>
-                <div style="padding:6px 16px;background:#E8EEFF;border:2px solid var(--accent);border-radius:6px;font-size:12px;font-weight:800;color:var(--accent);animation:pasteAppear 4s ease-in-out infinite">42</div>
-            </div>
-            <span class="vis-label">EVALUATE</span>
         </div></div>`,
 
     "Open 'Name Range' dialog": () => `<div class="vis">${visTitleBar('Formulas')}
@@ -1094,8 +1105,8 @@ function renderMustHaveToggle() {
                 <input type="checkbox" id="mustHaveCheck" ${state.mustHaveOnly ? 'checked' : ''}>
                 <span class="toggle-slider"></span>
             </div>
+            <span class="toggle-hint">Applies across all modes</span>
         </label>
-        <span class="toggle-hint">Applies across all modes</span>
     `;
     document.getElementById('mustHaveCheck').addEventListener('change', (e) => {
         state.mustHaveOnly = e.target.checked;
@@ -1237,6 +1248,12 @@ function skipCard() { state.currentCard++; showCard(); }
 function setupPractice() {
     document.getElementById('showAnswer').addEventListener('click', showPracticeAnswer);
     document.getElementById('nextPractice').addEventListener('click', nextPracticeQuestion);
+    document.getElementById('submitTyped').addEventListener('click', handleTypedAnswer);
+    document.getElementById('typeFallback').addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') { e.preventDefault(); handleTypedAnswer(); }
+        e.stopPropagation();
+    });
+    document.getElementById('typeFallback').addEventListener('keyup', (e) => e.stopPropagation());
 }
 
 function initPractice() {
@@ -1263,6 +1280,8 @@ function showPracticeQuestion() {
     document.getElementById('keyDisplay').className = 'key-display listening';
     document.getElementById('practiceFeedback').textContent = '';
     document.getElementById('practiceFeedback').className = 'practice-feedback';
+    const fallbackInput = document.getElementById('typeFallback');
+    if (fallbackInput) fallbackInput.value = '';
     state.practiceAnswered = false;
 }
 
@@ -1272,6 +1291,7 @@ function startKeyListener() {
 }
 
 function handlePracticeKey(e) {
+    if (e.target.id === 'typeFallback') return;
     const practiceView = document.getElementById('practice');
     if (!practiceView.classList.contains('active')) return;
     if (state.practiceAnswered) return;
@@ -1339,6 +1359,35 @@ function showPracticeAnswer() {
     document.getElementById('keyDisplay').className = 'key-display';
     document.getElementById('practiceFeedback').textContent = 'Answer revealed';
     document.getElementById('practiceFeedback').className = 'practice-feedback';
+    state.practiceAnswered = true;
+}
+
+function handleTypedAnswer() {
+    if (state.practiceAnswered) return;
+    const input = document.getElementById('typeFallback');
+    const typed = input.value.trim();
+    if (!typed) return;
+    const q = state.practiceQueue;
+    const idx = state.practiceIndex % q.length;
+    const shortcut = q[idx];
+    const correct = shortcut.key;
+    const display = document.getElementById('keyDisplay');
+    display.innerHTML = `<span>${typed}</span>`;
+    if (normalizeKey(typed) === normalizeKey(correct)) {
+        display.className = 'key-display correct';
+        document.getElementById('practiceFeedback').textContent = 'Correct!';
+        document.getElementById('practiceFeedback').className = 'practice-feedback correct';
+        state.practiceCorrect++;
+        document.getElementById('practiceCorrect').textContent = state.practiceCorrect;
+        markCorrect(shortcut.title);
+    } else {
+        display.className = 'key-display wrong';
+        document.getElementById('practiceFeedback').innerHTML = `Wrong — the answer is <strong>${correct}</strong>`;
+        document.getElementById('practiceFeedback').className = 'practice-feedback wrong';
+        state.practiceWrong++;
+        document.getElementById('practiceWrong').textContent = state.practiceWrong;
+        markWrong(shortcut.title);
+    }
     state.practiceAnswered = true;
 }
 
