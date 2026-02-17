@@ -992,6 +992,10 @@ function loadProgress() {
             state.progress[s.title] = { status: 'new', correctStreak: 0, lastSeen: 0 };
         }
     });
+    const validTitles = new Set(SHORTCUTS.map(s => s.title));
+    Object.keys(state.progress).forEach(key => {
+        if (!validTitles.has(key)) delete state.progress[key];
+    });
 }
 
 function saveProgress() {
@@ -1097,10 +1101,9 @@ function setupDashboard() {
 function renderMustHaveToggle() {
     const container = document.getElementById('mustHaveToggle');
     if (!container) return;
-    const mustHaveCount = SHORTCUTS.filter(s => s.mustHave).length;
     container.innerHTML = `
         <label class="toggle-switch-label">
-            <span class="toggle-text">Must-Haves Only (${mustHaveCount})</span>
+            <span class="toggle-text">Must-Haves Only</span>
             <div class="toggle-switch">
                 <input type="checkbox" id="mustHaveCheck" ${state.mustHaveOnly ? 'checked' : ''}>
                 <span class="toggle-slider"></span>
