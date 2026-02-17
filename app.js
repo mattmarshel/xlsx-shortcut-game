@@ -5,65 +5,65 @@
 
 // ===== SHORTCUT DATA =====
 const SHORTCUTS = [
-    { title: "Paste", key: "Ctrl+V", category: "Clipboard" },
-    { title: "Copy special", key: "Ctrl+C", category: "Clipboard" },
-    { title: "Cut", key: "Ctrl+X", category: "Clipboard" },
-    { title: "Copy the format right in a range", key: "Ctrl+R", category: "Clipboard" },
-    { title: "Copy the format down in a range", key: "Ctrl+D", category: "Clipboard" },
-    { title: "Copy formulas", key: "Ctrl+Enter", category: "Clipboard" },
-    { title: "Make absolute reference", key: "F4", category: "Formulas" },
-    { title: "Sum rows", key: "Alt+=", category: "Formulas" },
-    { title: "Open data validation list", key: "Alt+Down", category: "Data" },
-    { title: "Evaluate formula", key: "F9 in a cell", category: "Formulas" },
+    { title: "Paste", key: "Ctrl+V", category: "Clipboard", mustHave: true },
+    { title: "Copy special", key: "Ctrl+C", category: "Clipboard", mustHave: true },
+    { title: "Cut", key: "Ctrl+X", category: "Clipboard", mustHave: true },
+    { title: "Copy the format right in a range", key: "Ctrl+R", category: "Clipboard", mustHave: true },
+    { title: "Copy the format down in a range", key: "Ctrl+D", category: "Clipboard", mustHave: true },
+    { title: "Copy formulas", key: "Ctrl+Enter", category: "Clipboard", mustHave: true },
+    { title: "Make absolute reference", key: "F4", category: "Formulas", mustHave: true },
+    { title: "Sum rows", key: "Alt+=", category: "Formulas", mustHave: true },
+    { title: "Open data validation list", key: "Alt+Down", category: "Data", mustHave: true },
+    { title: "Evaluate formula", key: "F9 in a cell", category: "Formulas", mustHave: true },
     { title: "Insert or Modify comment", key: "Shift+F2", category: "Insert" },
-    { title: "Clear range values", key: "Del", category: "Editing" },
-    { title: "Undo last action", key: "Ctrl+Z", category: "Editing" },
+    { title: "Clear range values", key: "Del", category: "Editing", mustHave: true },
+    { title: "Undo last action", key: "Ctrl+Z", category: "Editing", mustHave: true },
     { title: "Redo last action", key: "Ctrl+Y / F4", category: "Editing" },
     { title: "Open 'Name Range' dialog", key: "Ctrl+F3", category: "Formulas" },
     { title: "Open file", key: "Ctrl+O", category: "File" },
     { title: "Print", key: "Ctrl+P", category: "File" },
-    { title: "Save", key: "Ctrl+S", category: "File" },
-    { title: "Group rows or columns", key: "Alt+D+G+G", category: "Data" },
-    { title: "Ungroup rows or columns", key: "Alt+D+G+U", category: "Data" },
-    { title: "Insert or remove auto filter", key: "Alt+D+F+F", category: "Data" },
+    { title: "Save", key: "Ctrl+S", category: "File", mustHave: true },
+    { title: "Group rows or columns", key: "Alt+D+G+G", category: "Data", mustHave: true },
+    { title: "Ungroup rows or columns", key: "Alt+D+G+U", category: "Data", mustHave: true },
+    { title: "Insert or remove auto filter", key: "Alt+D+F+F", category: "Data", mustHave: true },
     { title: "Show all rows in autofiltered table", key: "Alt+D+F+S", category: "Data" },
-    { title: "Find", key: "Ctrl+F", category: "Editing" },
-    { title: "Select and show A1", key: "Ctrl+Home", category: "Navigation" },
-    { title: "Select last used cell", key: "Ctrl+End", category: "Navigation" },
-    { title: "Select range", key: "Shift+Arrow", category: "Selection" },
-    { title: "Select rows or columns", key: "Ctrl+Space", category: "Selection" },
+    { title: "Find", key: "Ctrl+F", category: "Editing", mustHave: true },
+    { title: "Select and show A1", key: "Ctrl+Home", category: "Navigation", mustHave: true },
+    { title: "Select last used cell", key: "Ctrl+End", category: "Navigation", mustHave: true },
+    { title: "Select range", key: "Shift+Arrow", category: "Selection", mustHave: true },
+    { title: "Select rows or columns", key: "Ctrl+Space", category: "Selection", mustHave: true },
     { title: "Select rows", key: "Ctrl+Shift", category: "Selection" },
-    { title: "Select visible cells only", key: "Alt+;", category: "Selection" },
-    { title: "Select all surrounding cells", key: "Ctrl+A", category: "Selection" },
+    { title: "Select visible cells only", key: "Alt+;", category: "Selection", mustHave: true },
+    { title: "Select all surrounding cells", key: "Ctrl+A", category: "Selection", mustHave: true },
     { title: "Replace", key: "Ctrl+H", category: "Editing" },
     { title: "Scientific number format", key: "Ctrl+^", category: "Formatting" },
-    { title: "Cell format", key: "Ctrl+Shift+1", category: "Formatting" },
-    { title: "Number format", key: "Ctrl+!", category: "Formatting" },
-    { title: "Cycle heading", key: "Ctrl+Alt+H", category: "Formatting" },
-    { title: "Cycle style", key: "Ctrl+Alt+S", category: "Formatting" },
-    { title: "Clear formats", key: "Alt+E+A+S", category: "Formatting" },
+    { title: "Cell format", key: "Ctrl+Shift+1", category: "Formatting", mustHave: true },
+    { title: "Number format", key: "Ctrl+!", category: "Formatting", mustHave: true },
+    { title: "Cycle heading", key: "Ctrl+Alt+H", category: "Formatting", mustHave: true },
+    { title: "Cycle style", key: "Ctrl+Alt+S", category: "Formatting", mustHave: true },
+    { title: "Clear formats", key: "Alt+E+A+S", category: "Formatting", mustHave: true },
     { title: "Currency format", key: "Ctrl+$", category: "Formatting" },
     { title: "Italic", key: "Ctrl+I", category: "Formatting" },
     { title: "Underline", key: "Ctrl+U", category: "Formatting" },
-    { title: "Bold", key: "Ctrl+B", category: "Formatting" },
-    { title: "Percentage format", key: "Ctrl+Shift+%", category: "Formatting" },
+    { title: "Bold", key: "Ctrl+B", category: "Formatting", mustHave: true },
+    { title: "Percentage format", key: "Ctrl+Shift+%", category: "Formatting", mustHave: true },
     { title: "Insert time", key: "Ctrl+:", category: "Insert" },
-    { title: "Delete cell/range/row/column", key: "Ctrl+Shift+-", category: "Insert" },
-    { title: "Insert table", key: "Ctrl+T", category: "Insert" },
+    { title: "Delete cell/range/row/column", key: "Ctrl+Shift+-", category: "Insert", mustHave: true },
+    { title: "Insert table", key: "Ctrl+T", category: "Insert", mustHave: true },
     { title: "Insert sheet", key: "Shift+F11", category: "Insert" },
-    { title: "Insert cell/range/row/column", key: "Ctrl+Shift++", category: "Insert" },
+    { title: "Insert cell/range/row/column", key: "Ctrl+Shift++", category: "Insert", mustHave: true },
     { title: "Insert date", key: "Ctrl+;", category: "Insert" },
     { title: "Insert range name", key: "F3", category: "Formulas" },
-    { title: "Move to right sheet", key: "Ctrl+Page Down", category: "Navigation" },
-    { title: "Move to left sheet", key: "Ctrl+Page Up", category: "Navigation" },
+    { title: "Move to right sheet", key: "Ctrl+Page Down", category: "Navigation", mustHave: true },
+    { title: "Move to left sheet", key: "Ctrl+Page Up", category: "Navigation", mustHave: true },
     { title: "Open contextual menu (right-click)", key: "Shift+F10", category: "Navigation" },
-    { title: "Move to edge of data region", key: "Ctrl+Arrow", category: "Navigation" },
+    { title: "Move to edge of data region", key: "Ctrl+Arrow", category: "Navigation", mustHave: true },
     { title: "Open 'Go To' dialog", key: "Ctrl+G", category: "Navigation" },
     { title: "Spellcheck", key: "F7", category: "Editing" },
     { title: "Delete sheet", key: "Alt+E+L", category: "Sheet" },
     { title: "Move or copy sheet", key: "Alt+E+M", category: "Sheet" },
-    { title: "Rename sheet", key: "Alt+O+H+R", category: "Sheet" },
-    { title: "Show cell content", key: "F2", category: "Editing" },
+    { title: "Rename sheet", key: "Alt+O+H+R", category: "Sheet", mustHave: true },
+    { title: "Show cell content", key: "F2", category: "Editing", mustHave: true },
     { title: "Hide or show ribbon", key: "Ctrl+F1", category: "View" },
     { title: "Open zoom dialog", key: "Alt+V+Z", category: "View" },
     { title: "Close application", key: "Alt+F4", category: "File" },
@@ -930,7 +930,8 @@ let state = {
     speedScore: 0,
     speedTimer: null,
     speedTimeLeft: 60,
-    activeCategory: null
+    activeCategory: null,
+    mustHaveOnly: false
 };
 
 // ===== INIT =====
@@ -1015,8 +1016,10 @@ function shuffle(arr) {
 }
 
 function getFilteredShortcuts() {
-    if (!state.activeCategory) return [...SHORTCUTS];
-    return SHORTCUTS.filter(s => s.category === state.activeCategory);
+    let shortcuts = [...SHORTCUTS];
+    if (state.activeCategory) shortcuts = shortcuts.filter(s => s.category === state.activeCategory);
+    if (state.mustHaveOnly) shortcuts = shortcuts.filter(s => s.mustHave);
+    return shortcuts;
 }
 
 function getMasteredCount() { return Object.values(state.progress).filter(p => p.status === 'mastered').length; }
@@ -1074,9 +1077,40 @@ function switchView(mode) {
 // ===== DASHBOARD =====
 function setupDashboard() {
     updateProgressRing();
+    renderMustHaveToggle();
     renderCategoryChips();
     renderShortcutTable();
     document.getElementById('resetProgress').onclick = resetAllProgress;
+}
+
+function renderMustHaveToggle() {
+    const container = document.getElementById('mustHaveToggle');
+    if (!container) return;
+    const mustHaveCount = SHORTCUTS.filter(s => s.mustHave).length;
+    container.innerHTML = `
+        <label class="toggle-switch-label">
+            <span class="toggle-text">Must-Haves Only (${mustHaveCount})</span>
+            <div class="toggle-switch">
+                <input type="checkbox" id="mustHaveCheck" ${state.mustHaveOnly ? 'checked' : ''}>
+                <span class="toggle-slider"></span>
+            </div>
+        </label>
+        <span class="toggle-hint">Applies across all modes</span>
+    `;
+    document.getElementById('mustHaveCheck').addEventListener('change', (e) => {
+        state.mustHaveOnly = e.target.checked;
+        renderCategoryChips();
+        renderShortcutTable();
+        // Re-init active mode
+        const activeView = document.querySelector('.view.active');
+        if (activeView) {
+            const mode = activeView.id;
+            if (mode === 'learn') initLearnDeck();
+            if (mode === 'practice') initPractice();
+            if (mode === 'quiz') initQuiz();
+            if (mode === 'speed') initSpeed();
+        }
+    });
 }
 
 function updateProgressRing() {
@@ -1095,13 +1129,15 @@ function updateProgressRing() {
 function renderCategoryChips() {
     const container = document.getElementById('categoryChips');
     container.innerHTML = '';
+    const pool = state.mustHaveOnly ? SHORTCUTS.filter(s => s.mustHave) : SHORTCUTS;
     const allChip = document.createElement('button');
     allChip.className = 'category-chip' + (!state.activeCategory ? ' active' : '');
-    allChip.textContent = `All (${SHORTCUTS.length})`;
+    allChip.textContent = `All (${pool.length})`;
     allChip.addEventListener('click', () => { state.activeCategory = null; renderCategoryChips(); renderShortcutTable(); });
     container.appendChild(allChip);
     CATEGORIES.forEach(cat => {
-        const count = SHORTCUTS.filter(s => s.category === cat).length;
+        const count = pool.filter(s => s.category === cat).length;
+        if (state.mustHaveOnly && count === 0) return;
         const chip = document.createElement('button');
         chip.className = 'category-chip' + (state.activeCategory === cat ? ' active' : '');
         chip.textContent = `${cat} (${count})`;
@@ -1121,7 +1157,8 @@ function renderShortcutTable(filter = '') {
     shortcuts.forEach(s => {
         const p = state.progress[s.title];
         const tr = document.createElement('tr');
-        tr.innerHTML = `<td>${s.title}</td><td><span class="shortcut-key">${s.key}</span></td><td><span class="category-badge">${s.category}</span></td><td><span class="status-badge ${p.status}">${p.status}</span></td>`;
+        const star = s.mustHave ? '<span class="must-have-badge" title="Must-have shortcut">&#9733;</span>' : '';
+        tr.innerHTML = `<td>${star}${s.title}</td><td><span class="shortcut-key">${s.key}</span></td><td><span class="category-badge">${s.category}</span></td><td><span class="status-badge ${p.status}">${p.status}</span></td>`;
         tbody.appendChild(tr);
     });
     const searchInput = document.getElementById('searchInput');
