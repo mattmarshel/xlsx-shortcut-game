@@ -5,97 +5,98 @@
 
 // ===== SHORTCUT DATA =====
 const SHORTCUTS = [
-    { title: "Paste", key: "Ctrl+V", category: "Clipboard", mustHave: true },
-    { title: "Copy special", key: "Ctrl+C", category: "Clipboard", mustHave: true },
-    { title: "Cut", key: "Ctrl+X", category: "Clipboard", mustHave: true },
-    { title: "Copy the format right in a range", key: "Ctrl+R", category: "Clipboard", mustHave: true },
-    { title: "Copy the format down in a range", key: "Ctrl+D", category: "Clipboard", mustHave: true },
-    { title: "Copy formulas", key: "Ctrl+Enter", category: "Clipboard", mustHave: true },
-    { title: "Cycle absolute and relative references", key: "F4", category: "Formulas", mustHave: true },
-    { title: "Sum rows", key: "Alt+=", category: "Formulas", mustHave: true },
-    { title: "Open data validation list", key: "Alt+Down", category: "Data", mustHave: true },
-    { title: "Insert or Modify comment", key: "Shift+F2", category: "Insert" },
-    { title: "Clear range values", key: "Del", category: "Editing", mustHave: true },
-    { title: "Undo last action", key: "Ctrl+Z", category: "Editing", mustHave: true },
-    { title: "Redo last action", key: "Ctrl+Y / F4", category: "Editing" },
-    { title: "Open 'Name Range' dialog", key: "Ctrl+F3", category: "Formulas" },
-    { title: "Open file", key: "Ctrl+O", category: "File" },
-    { title: "Print", key: "Ctrl+P", category: "File" },
-    { title: "Save", key: "Ctrl+S", category: "File" },
-    { title: "Group rows or columns", key: "Alt+D+G+G", category: "Data", mustHave: true },
-    { title: "Ungroup rows or columns", key: "Alt+D+G+U", category: "Data", mustHave: true },
-    { title: "Turn on/off autofilter", key: "Alt+A T", category: "Data", mustHave: true },
+    { title: "Paste", key: "Ctrl+V", macKey: "Cmd+V", category: "Clipboard", mustHave: true },
+    { title: "Copy special", key: "Ctrl+C", macKey: "Cmd+C", category: "Clipboard", mustHave: true },
+    { title: "Cut", key: "Ctrl+X", macKey: "Cmd+X", category: "Clipboard", mustHave: true },
+    { title: "Copy the format right in a range", key: "Ctrl+R", macKey: "Cmd+R", category: "Clipboard", mustHave: true },
+    { title: "Copy the format down in a range", key: "Ctrl+D", macKey: "Cmd+D", category: "Clipboard", mustHave: true },
+    { title: "Copy formulas", key: "Ctrl+Enter", macKey: "Control+Return", category: "Clipboard", mustHave: true },
+    { title: "Cycle absolute and relative references", key: "F4", macKey: "F4", category: "Formulas", mustHave: true },
+    { title: "Sum rows", key: "Alt+=", macKey: "Cmd+Shift+T", category: "Formulas", mustHave: true },
+    { title: "Open data validation list", key: "Alt+Down", macKey: "Option+Down Arrow", category: "Data", mustHave: true },
+    { title: "Insert or Modify comment", key: "Shift+F2", macKey: "Shift+F2", category: "Insert" },
+    { title: "Clear range values", key: "Del", macKey: "Delete", category: "Editing", mustHave: true },
+    { title: "Undo last action", key: "Ctrl+Z", macKey: "Cmd+Z", category: "Editing", mustHave: true },
+    { title: "Redo last action", key: "Ctrl+Y / F4", macKey: "Cmd+Y", category: "Editing" },
+    { title: "Open 'Name Range' dialog", key: "Ctrl+F3", macKey: "Cmd+F3", category: "Formulas" },
+    { title: "Open file", key: "Ctrl+O", macKey: "Cmd+O", category: "File" },
+    { title: "Print", key: "Ctrl+P", macKey: "Cmd+P", category: "File" },
+    { title: "Save", key: "Ctrl+S", macKey: "Cmd+S", category: "File" },
+    { title: "Group rows or columns", key: "Alt+D+G+G", macKey: "Cmd+Shift+K", category: "Data", mustHave: true },
+    { title: "Ungroup rows or columns", key: "Alt+D+G+U", macKey: "Cmd+Shift+J", category: "Data", mustHave: true },
+    { title: "Turn on/off autofilter", key: "Alt+A T", macKey: "Cmd+Shift+F", category: "Data", mustHave: true },
     { title: "Show all (remove existing filters)", key: "Alt+A C", category: "Data" },
-    { title: "Find", key: "Ctrl+F", category: "Editing", mustHave: true },
-    { title: "Select and show A1", key: "Ctrl+Home", category: "Navigation", mustHave: true },
-    { title: "Select last used cell", key: "Ctrl+End", category: "Navigation", mustHave: true },
-    { title: "Select range", key: "Shift+Arrow", category: "Selection", mustHave: true },
-    { title: "Select entire column", key: "Ctrl+Space", category: "Selection", mustHave: true },
+    { title: "Find", key: "Ctrl+F", macKey: "Cmd+F", category: "Editing", mustHave: true },
+    { title: "Select and show A1", key: "Ctrl+Home", macKey: "Control+Fn+Left Arrow", category: "Navigation", mustHave: true },
+    { title: "Select last used cell", key: "Ctrl+End", macKey: "Control+Fn+Right Arrow", category: "Navigation", mustHave: true },
+    { title: "Select range", key: "Shift+Arrow", macKey: "Shift+Arrow", category: "Selection", mustHave: true },
+    { title: "Select entire column", key: "Ctrl+Space", macKey: "Control+Spacebar", category: "Selection", mustHave: true },
     { title: "Select rows", key: "Ctrl+Shift", category: "Selection" },
-    { title: "Select visible cells only", key: "Alt+;", category: "Selection", mustHave: true },
-    { title: "Select all surrounding cells", key: "Ctrl+A", category: "Selection", mustHave: true },
-    { title: "Replace", key: "Ctrl+H", category: "Editing" },
-    { title: "Scientific number format", key: "Ctrl+^", category: "Formatting" },
-    { title: "Cell format", key: "Ctrl+Shift+1", category: "Formatting", mustHave: true },
-    { title: "Number format", key: "Ctrl+!", category: "Formatting", mustHave: true },
+    { title: "Select visible cells only", key: "Alt+;", macKey: "Option+;", category: "Selection", mustHave: true },
+    { title: "Select all surrounding cells", key: "Ctrl+A", macKey: "Cmd+A", category: "Selection", mustHave: true },
+    { title: "Replace", key: "Ctrl+H", macKey: "Control+H", category: "Editing" },
+    { title: "Scientific number format", key: "Ctrl+^", macKey: "Control+Shift+^", category: "Formatting" },
+    { title: "Cell format", key: "Ctrl+Shift+1", macKey: "Control+Shift+!", category: "Formatting", mustHave: true },
+    { title: "Number format", key: "Ctrl+!", macKey: "Control+Shift+!", category: "Formatting", mustHave: true },
     { title: "Cycle heading", key: "Ctrl+Alt+H", category: "Formatting", mustHave: true },
     { title: "Cycle style", key: "Ctrl+Alt+S", category: "Formatting", mustHave: true },
     { title: "Clear formats", key: "Alt+E+A+S", category: "Formatting", mustHave: true },
-    { title: "Currency format", key: "Ctrl+$", category: "Formatting" },
-    { title: "Italic", key: "Ctrl+I", category: "Formatting" },
-    { title: "Underline", key: "Ctrl+U", category: "Formatting" },
-    { title: "Bold", key: "Ctrl+B", category: "Formatting" },
-    { title: "Percentage format", key: "Ctrl+Shift+%", category: "Formatting", mustHave: true },
-    { title: "Insert time", key: "Ctrl+:", category: "Insert" },
-    { title: "Delete selected cells", key: "Ctrl+-", category: "Insert", mustHave: true },
-    { title: "Insert table", key: "Ctrl+T", category: "Insert", mustHave: true },
-    { title: "Insert sheet", key: "Shift+F11", category: "Insert" },
-    { title: "Insert selected cells", key: "Ctrl++", category: "Insert", mustHave: true },
-    { title: "Insert date", key: "Ctrl+;", category: "Insert" },
-    { title: "Insert range name", key: "F3", category: "Formulas" },
-    { title: "Move to right sheet", key: "Ctrl+Page Down", category: "Navigation", mustHave: true },
-    { title: "Move to left sheet", key: "Ctrl+Page Up", category: "Navigation", mustHave: true },
+    { title: "Currency format", key: "Ctrl+$", macKey: "Control+Shift+$", category: "Formatting" },
+    { title: "Italic", key: "Ctrl+I", macKey: "Cmd+I", category: "Formatting" },
+    { title: "Underline", key: "Ctrl+U", macKey: "Cmd+U", category: "Formatting" },
+    { title: "Bold", key: "Ctrl+B", macKey: "Cmd+B", category: "Formatting" },
+    { title: "Percentage format", key: "Ctrl+Shift+%", macKey: "Control+Shift+%", category: "Formatting", mustHave: true },
+    { title: "Insert time", key: "Ctrl+:", macKey: "Cmd+;", category: "Insert" },
+    { title: "Delete selected cells", key: "Ctrl+-", macKey: "Cmd+-", category: "Insert", mustHave: true },
+    { title: "Insert table", key: "Ctrl+T", macKey: "Cmd+T", category: "Insert", mustHave: true },
+    { title: "Insert sheet", key: "Shift+F11", macKey: "Shift+F11", category: "Insert" },
+    { title: "Insert selected cells", key: "Ctrl++", macKey: "Control+Shift+=", category: "Insert", mustHave: true },
+    { title: "Insert date", key: "Ctrl+;", macKey: "Control+;", category: "Insert" },
+    { title: "Insert range name", key: "F3", macKey: "F3", category: "Formulas" },
+    { title: "Move to right sheet", key: "Ctrl+Page Down", macKey: "Option+Right Arrow", category: "Navigation", mustHave: true },
+    { title: "Move to left sheet", key: "Ctrl+Page Up", macKey: "Option+Left Arrow", category: "Navigation", mustHave: true },
     { title: "Open contextual menu (right-click)", key: "Shift+F10", category: "Navigation" },
-    { title: "Move to edge of data region", key: "Ctrl+Arrow", category: "Navigation", mustHave: true },
-    { title: "Open 'Go To' dialog", key: "Ctrl+G", category: "Navigation" },
-    { title: "Spellcheck", key: "F7", category: "Editing" },
+    { title: "Move to edge of data region", key: "Ctrl+Arrow", macKey: "Cmd+Arrow", category: "Navigation", mustHave: true },
+    { title: "Open 'Go To' dialog", key: "Ctrl+G", macKey: "Control+G", category: "Navigation" },
+    { title: "Spellcheck", key: "F7", macKey: "F7", category: "Editing" },
     { title: "Delete sheet", key: "Alt+E+L", category: "Sheet" },
     { title: "Move or copy sheet", key: "Alt+E+M", category: "Sheet" },
     { title: "Change sheet name", key: "Alt+H O R", category: "Sheet" },
-    { title: "Show cell content", key: "F2", category: "Editing", mustHave: true },
-    { title: "Hide or show ribbon", key: "Ctrl+F1", category: "View" },
+    { title: "Show cell content", key: "F2", macKey: "F2", category: "Editing", mustHave: true },
+    { title: "Hide or show ribbon", key: "Ctrl+F1", macKey: "Cmd+Option+R", category: "View" },
     { title: "Open zoom dialog", key: "Alt+V+Z", category: "View" },
-    { title: "Close application", key: "Alt+F4", category: "File" },
+    { title: "Close application", key: "Alt+F4", macKey: "Cmd+Q", category: "File" },
     { title: "Lock computer", key: "Window+L", category: "System" },
     { title: "Open Windows Explorer", key: "Window+E", category: "System" },
-    { title: "Close window", key: "Ctrl+W", category: "File" },
+    { title: "Close window", key: "Ctrl+W", macKey: "Cmd+W", category: "File" },
     { title: "Show desktop", key: "Window+D", category: "System" },
     { title: "Open this list of keyboard shortcuts", key: "Ctrl+Alt+Q", category: "System" },
-    { title: "Switch between open items", key: "Alt+Tab", category: "System" },
-    { title: "New File", key: "Ctrl+N", category: "File", mustHave: true },
-    { title: "Save As", key: "F12", category: "File" },
-    { title: "Move one screen up/down", key: "PageUp / PageDown", category: "Navigation" },
-    { title: "Move one screen left/right", key: "Alt+PageUp / PageDown", category: "Navigation" },
-    { title: "Select between current cell and navigation result", key: "Shift+Navigation key", category: "Selection" },
-    { title: "Select entire row", key: "Shift+Spacebar", category: "Selection", mustHave: true },
+    { title: "Switch between open items", key: "Alt+Tab", macKey: "Cmd+Tab", category: "System" },
+    { title: "New File", key: "Ctrl+N", macKey: "Cmd+N", category: "File", mustHave: true },
+    { title: "Save As", key: "F12", macKey: "Cmd+Shift+S", category: "File" },
+    { title: "Move one screen up/down", key: "PageUp / PageDown", macKey: "Fn+Up / Fn+Down", category: "Navigation" },
+    { title: "Move one screen left/right", key: "Alt+PageUp / PageDown", macKey: "Option+Page Up / Page Down", category: "Navigation" },
+    { title: "Select between current cell and navigation result", key: "Shift+Navigation key", macKey: "Shift+Navigation key", category: "Selection" },
+    { title: "Select entire row", key: "Shift+Spacebar", macKey: "Shift+Spacebar", category: "Selection", mustHave: true },
     { title: "Delete", key: "Alt+H, D, D", category: "Editing" },
     { title: "Insert Row", key: "Alt+H, I, R", category: "Insert", mustHave: true },
     { title: "Insert Column", key: "Alt+H, I, C", category: "Insert", mustHave: true },
-    { title: "Hide column/row", key: "Ctrl+0 / 9", category: "View", mustHave: true },
-    { title: "Unhide column/row", key: "Ctrl+Shift+0 / 9", category: "View" },
-    { title: "Calculate entire file", key: "F9", category: "Formulas" },
-    { title: "Calculate active sheet only", key: "Shift+F9", category: "Formulas" },
+    { title: "Hide column/row", key: "Ctrl+0 / 9", macKey: "Control+0 / 9", category: "View", mustHave: true },
+    { title: "Unhide column/row", key: "Ctrl+Shift+0 / 9", macKey: "Control+Shift+0 / 9", category: "View" },
+    { title: "Calculate entire file", key: "F9", macKey: "F9", category: "Formulas" },
+    { title: "Calculate active sheet only", key: "Shift+F9", macKey: "Shift+F9", category: "Formulas" },
     { title: "Toggle formula bar", key: "Ctrl+Shift+U", category: "View" },
-    { title: "Paste Special", key: "Ctrl+Alt+V", category: "Clipboard", mustHave: true },
-    { title: "Copy exact formula from above", key: "Ctrl+'", category: "Formulas" },
+    { title: "Paste Special", key: "Ctrl+Alt+V", macKey: "Cmd+Control+V", category: "Clipboard", mustHave: true },
+    { title: "Copy exact formula from above", key: "Ctrl+'", macKey: "Control+'", category: "Formulas" },
     { title: "Insert PivotTable", key: "Alt+N V T", category: "Data" },
-    { title: "Format Cells", key: "Ctrl+1", category: "Formatting", mustHave: true },
-    { title: "General number format", key: "Ctrl+Shift+~", category: "Formatting" },
+    { title: "Format Cells", key: "Ctrl+1", macKey: "Cmd+1", category: "Formatting", mustHave: true },
+    { title: "General number format", key: "Ctrl+Shift+~", macKey: "Control+Shift+~", category: "Formatting" },
     { title: "Format Font Dialog Box", key: "Ctrl+Shift+F", category: "Formatting" },
     { title: "Auto fit column", key: "Alt+H, O, I", category: "Formatting" },
     { title: "Auto fit row", key: "Alt+H, O, A", category: "Formatting" },
     { title: "Decrease decimals", key: "Alt+H, 9", category: "Formatting" },
-    { title: "Increase decimals", key: "Alt+H, 0", category: "Formatting" }
+    { title: "Increase decimals", key: "Alt+H, 0", category: "Formatting" },
+    { title: "Insert Hyperlink", key: "Ctrl+K", macKey: "Cmd+K", category: "Insert" }
 ];
 
 const CATEGORIES = [...new Set(SHORTCUTS.map(s => s.category))];
@@ -863,6 +864,15 @@ const VISUALS = {
                 <div style="font-size:6px;color:#888">Show all shortcuts</div>
             </div>
             <span class="vis-label">SHORTCUTS</span>
+        </div></div>`,
+
+    "Insert Hyperlink": () => `<div class="vis">${visTitleBar('Insert')}
+        <div class="vis-canvas">
+            ${miniGrid({cols: 3, cellW: 50})}
+            <div style="position:absolute;left:72px;top:20px;width:50px;height:16px;border:2px solid var(--accent);background:rgba(34,81,255,.08);animation:cellHighlight 4s ease-in-out infinite"></div>
+            <div style="position:absolute;left:75px;top:22px;font-size:5.5px;color:var(--accent);text-decoration:underline;font-weight:600;animation:pasteAppear 4s ease-in-out infinite">Link</div>
+            <div style="position:absolute;right:15px;top:60px;font-size:16px;color:var(--accent);animation:visPulse 4s ease-in-out infinite">&#128279;</div>
+            <span class="vis-label">HYPERLINK</span>
         </div></div>`
 };
 
@@ -942,13 +952,17 @@ let state = {
     speedTimer: null,
     speedTimeLeft: 60,
     activeCategory: null,
-    mustHaveOnly: false
+    mustHaveOnly: false,
+    platform: 'windows'
 };
 
 // ===== INIT =====
 function init() {
+    SCORM.init();
     loadProgress();
+    SCORM.reportProgress(getMasteredCount(), getPlatformShortcuts().length);
     addSVGDefs();
+    renderPlatformToggle();
     setupNav();
     setupDashboard();
     setupLearn();
@@ -956,7 +970,6 @@ function init() {
     setupQuiz();
     setupSpeed();
     updateHeaderStats();
-    document.getElementById('totalShortcuts').textContent = SHORTCUTS.length;
 }
 
 function addSVGDefs() {
@@ -976,6 +989,35 @@ function addSVGDefs() {
     }
 }
 
+function renderPlatformToggle() {
+    const container = document.getElementById('platformToggle');
+    if (!container) return;
+    container.innerHTML = `
+        <div class="platform-toggle">
+            <button class="platform-btn ${state.platform === 'windows' ? 'active' : ''}" data-platform="windows"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg> Windows</button>
+            <button class="platform-btn ${state.platform === 'mac' ? 'active' : ''}" data-platform="mac"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg> Mac</button>
+        </div>
+    `;
+    container.querySelectorAll('.platform-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            if (btn.dataset.platform === state.platform) return;
+            state.platform = btn.dataset.platform;
+            saveProgress();
+            renderPlatformToggle();
+            setupDashboard();
+            updateHeaderStats();
+            const activeView = document.querySelector('.view.active');
+            if (activeView) {
+                const mode = activeView.id;
+                if (mode === 'learn') initLearnDeck();
+                if (mode === 'practice') initPractice();
+                if (mode === 'quiz') initQuiz();
+                if (mode === 'speed') initSpeed();
+            }
+        });
+    });
+}
+
 // ===== PERSISTENCE =====
 function loadProgress() {
     try {
@@ -985,6 +1027,7 @@ function loadProgress() {
             state.progress = data.progress || {};
             state.streak = data.streak || 0;
             state.bestSpeed = data.bestSpeed || 0;
+            state.platform = data.platform || 'windows';
         }
     } catch (e) { /* ignore */ }
     SHORTCUTS.forEach(s => {
@@ -1001,7 +1044,7 @@ function loadProgress() {
 function saveProgress() {
     try {
         localStorage.setItem('xlsx-shortcut-master', JSON.stringify({
-            progress: state.progress, streak: state.streak, bestSpeed: state.bestSpeed
+            progress: state.progress, streak: state.streak, bestSpeed: state.bestSpeed, platform: state.platform
         }));
     } catch (e) { /* ignore */ }
 }
@@ -1030,20 +1073,58 @@ function shuffle(arr) {
     return a;
 }
 
+function getPlatformShortcuts() {
+    if (state.platform === 'mac') return SHORTCUTS.filter(s => s.macKey);
+    return SHORTCUTS;
+}
+
+function getShortcutKey(shortcut) {
+    return state.platform === 'mac' ? (shortcut.macKey || shortcut.key) : shortcut.key;
+}
+
+function getShortcutAltKey(shortcut) {
+    return state.platform === 'mac' ? (shortcut.macAltKey || null) : (shortcut.altKey || null);
+}
+
+function getDisplayKey(shortcut) {
+    const key = getShortcutKey(shortcut);
+    const altKey = getShortcutAltKey(shortcut);
+    return altKey ? `${key} or ${altKey}` : key;
+}
+
+function isCorrectKey(pressed, shortcut) {
+    const norm = normalizeKey(pressed);
+    const key = getShortcutKey(shortcut);
+    const altKey = getShortcutAltKey(shortcut);
+    if (norm === normalizeKey(key)) return true;
+    if (altKey && norm === normalizeKey(altKey)) return true;
+    if (key.includes(' or ')) {
+        const parts = key.split(' or ').map(s => s.trim());
+        return parts.some(p => norm === normalizeKey(p));
+    }
+    return false;
+}
+
 function getFilteredShortcuts() {
     let shortcuts = [...SHORTCUTS];
+    if (state.platform === 'mac') shortcuts = shortcuts.filter(s => s.macKey);
     if (state.activeCategory) shortcuts = shortcuts.filter(s => s.category === state.activeCategory);
     if (state.mustHaveOnly) shortcuts = shortcuts.filter(s => s.mustHave);
     return shortcuts;
 }
 
-function getMasteredCount() { return Object.values(state.progress).filter(p => p.status === 'mastered').length; }
-function getLearningCount() { return Object.values(state.progress).filter(p => p.status === 'learning').length; }
-function getNewCount() { return Object.values(state.progress).filter(p => p.status === 'new').length; }
+function getMasteredCount() { return getPlatformShortcuts().filter(s => state.progress[s.title] && state.progress[s.title].status === 'mastered').length; }
+function getLearningCount() { return getPlatformShortcuts().filter(s => state.progress[s.title] && state.progress[s.title].status === 'learning').length; }
+function getNewCount() { return getPlatformShortcuts().filter(s => state.progress[s.title] && state.progress[s.title].status === 'new').length; }
 
 function updateHeaderStats() {
     document.getElementById('masteredCount').textContent = getMasteredCount();
     document.getElementById('streakCount').textContent = state.streak;
+    const total = getPlatformShortcuts().length;
+    const masteredLabel = document.getElementById('masteredCountLabel');
+    if (masteredLabel) masteredLabel.textContent = total;
+    const heroCount = document.getElementById('heroShortcutCount');
+    if (heroCount) heroCount.textContent = total;
 }
 
 function markCorrect(title) {
@@ -1054,6 +1135,7 @@ function markCorrect(title) {
     else if (p.status === 'new') p.status = 'learning';
     state.streak++;
     saveProgress(); updateHeaderStats();
+    SCORM.reportProgress(getMasteredCount(), getPlatformShortcuts().length);
 }
 
 function markWrong(title) {
@@ -1095,7 +1177,22 @@ function setupDashboard() {
     renderMustHaveToggle();
     renderCategoryChips();
     renderShortcutTable();
+    updateFooter();
     document.getElementById('resetProgress').onclick = resetAllProgress;
+}
+
+function updateFooter() {
+    const footer = document.getElementById('siteFootnote');
+    if (!footer) return;
+    if (state.platform === 'mac') {
+        footer.innerHTML = `
+            <p>Showing ${getPlatformShortcuts().length} shortcuts with Mac equivalents. ${SHORTCUTS.length - getPlatformShortcuts().length} shortcuts are Windows-only and hidden in Mac mode.</p>
+        `;
+    } else {
+        footer.innerHTML = `
+            <p>These shortcuts can vary based on computer type (Windows and Mac) and computer settings (keyboard language/layout). These shortcuts have been tested with Windows and Mac on an American keyboard (QWERTY layout).</p>
+        `;
+    }
 }
 
 function renderMustHaveToggle() {
@@ -1128,22 +1225,25 @@ function renderMustHaveToggle() {
 }
 
 function updateProgressRing() {
+    const total = getPlatformShortcuts().length;
     const mastered = getMasteredCount();
-    const total = SHORTCUTS.length;
-    const percent = Math.round((mastered / total) * 100);
+    const learning = getLearningCount();
+    const newCount = total - mastered - learning;
+    const percent = total > 0 ? Math.round((mastered / total) * 100) : 0;
     document.getElementById('progressPercent').textContent = percent + '%';
-    document.getElementById('newCount').textContent = getNewCount();
-    document.getElementById('learningCount').textContent = getLearningCount();
+    document.getElementById('newCount').textContent = newCount;
+    document.getElementById('learningCount').textContent = learning;
     document.getElementById('masteredCountDash').textContent = mastered;
     const ring = document.getElementById('progressRingFill');
     const circumference = 2 * Math.PI * 70;
-    ring.style.strokeDashoffset = circumference - (mastered / total) * circumference;
+    ring.style.strokeDashoffset = total > 0 ? circumference - (mastered / total) * circumference : circumference;
 }
 
 function renderCategoryChips() {
     const container = document.getElementById('categoryChips');
     container.innerHTML = '';
-    const pool = state.mustHaveOnly ? SHORTCUTS.filter(s => s.mustHave) : SHORTCUTS;
+    const base = getPlatformShortcuts();
+    const pool = state.mustHaveOnly ? base.filter(s => s.mustHave) : base;
     const allChip = document.createElement('button');
     allChip.className = 'category-chip' + (!state.activeCategory ? ' active' : '');
     allChip.textContent = `All (${pool.length})`;
@@ -1166,13 +1266,16 @@ function renderShortcutTable(filter = '') {
     let shortcuts = getFilteredShortcuts();
     if (filter) {
         const lf = filter.toLowerCase();
-        shortcuts = shortcuts.filter(s => s.title.toLowerCase().includes(lf) || s.key.toLowerCase().includes(lf) || s.category.toLowerCase().includes(lf));
+        shortcuts = shortcuts.filter(s => s.title.toLowerCase().includes(lf) || getShortcutKey(s).toLowerCase().includes(lf) || s.category.toLowerCase().includes(lf));
     }
     shortcuts.forEach(s => {
         const p = state.progress[s.title];
         const tr = document.createElement('tr');
+        const pKey = getShortcutKey(s);
+        const pAltKey = getShortcutAltKey(s);
+        const keyDisplay = pAltKey ? `<span class="shortcut-key">${pKey}</span> <span style="font-size:.7rem;color:var(--text-muted)">or</span> <span class="shortcut-key">${pAltKey}</span>` : `<span class="shortcut-key">${pKey}</span>`;
         const star = s.mustHave ? '<span class="must-have-badge" title="Must-have shortcut">&#9733;</span>' : '';
-        tr.innerHTML = `<td>${star}${s.title}</td><td><span class="shortcut-key">${s.key}</span></td><td><span class="category-badge">${s.category}</span></td><td><span class="status-badge ${p.status}">${p.status}</span></td>`;
+        tr.innerHTML = `<td>${star}${s.title}</td><td>${keyDisplay}</td><td><span class="category-badge">${s.category}</span></td><td><span class="status-badge ${p.status}">${p.status}</span></td>`;
         tbody.appendChild(tr);
     });
     const searchInput = document.getElementById('searchInput');
@@ -1208,7 +1311,7 @@ function showCard() {
     const idx = state.currentCard % deck.length;
     const card = deck[idx];
     document.getElementById('cardFrontText').textContent = card.title;
-    document.getElementById('cardBackText').textContent = card.key;
+    document.getElementById('cardBackText').textContent = getDisplayKey(card);
     document.getElementById('cardProgress').textContent = `${idx + 1} / ${deck.length}`;
     document.getElementById('cardProgressFill').style.width = ((idx + 1) / deck.length * 100) + '%';
     const visContainer = document.getElementById('cardVisual');
@@ -1300,9 +1403,16 @@ function handlePracticeKey(e) {
     if (state.practiceAnswered) return;
     e.preventDefault();
     const parts = [];
-    if (e.ctrlKey || e.metaKey) parts.push('Ctrl');
-    if (e.altKey) parts.push('Alt');
-    if (e.shiftKey) parts.push('Shift');
+    if (state.platform === 'mac') {
+        if (e.ctrlKey) parts.push('Control');
+        if (e.metaKey) parts.push('Cmd');
+        if (e.altKey) parts.push('Option');
+        if (e.shiftKey) parts.push('Shift');
+    } else {
+        if (e.ctrlKey || e.metaKey) parts.push('Ctrl');
+        if (e.altKey) parts.push('Alt');
+        if (e.shiftKey) parts.push('Shift');
+    }
     const keyMap = {
         'ArrowLeft':'Left Arrow', 'ArrowRight':'Right Arrow', 'ArrowUp':'Up Arrow', 'ArrowDown':'Down Arrow',
         'BracketRight':']', 'BracketLeft':'[', ' ':'Space', 'Space':'Space',
@@ -1317,6 +1427,7 @@ function handlePracticeKey(e) {
     if (keyMap[key]) key = keyMap[key];
     else if (keyMap[e.code]) key = keyMap[e.code];
     else if (key.length === 1) key = key.toUpperCase();
+    if (state.platform === 'mac' && key === 'Space') key = 'Spacebar';
     if (['Control', 'Alt', 'Shift', 'Meta'].includes(key)) {
         document.getElementById('keyDisplay').innerHTML = `<span style="color:var(--accent)">${parts.join('+') + '+...'}</span>`;
         return;
@@ -1327,22 +1438,23 @@ function handlePracticeKey(e) {
     display.innerHTML = `<span>${pressed}</span>`;
     const q = state.practiceQueue;
     const idx = state.practiceIndex % q.length;
-    const correct = q[idx].key;
-    if (normalizeKey(pressed) === normalizeKey(correct)) {
+    const shortcut = q[idx];
+    const displayKey = getDisplayKey(shortcut);
+    if (isCorrectKey(pressed, shortcut)) {
         display.className = 'key-display correct';
         document.getElementById('practiceFeedback').textContent = 'Correct!';
         document.getElementById('practiceFeedback').className = 'practice-feedback correct';
         state.practiceCorrect++;
         document.getElementById('practiceCorrect').textContent = state.practiceCorrect;
-        markCorrect(q[idx].title);
+        markCorrect(shortcut.title);
         state.practiceAnswered = true;
     } else {
         display.className = 'key-display wrong';
-        document.getElementById('practiceFeedback').innerHTML = `Wrong — the answer is <strong>${correct}</strong>`;
+        document.getElementById('practiceFeedback').innerHTML = `Wrong — the answer is <strong>${displayKey}</strong>`;
         document.getElementById('practiceFeedback').className = 'practice-feedback wrong';
         state.practiceWrong++;
         document.getElementById('practiceWrong').textContent = state.practiceWrong;
-        markWrong(q[idx].title);
+        markWrong(shortcut.title);
         state.practiceAnswered = true;
     }
 }
@@ -1351,14 +1463,15 @@ function normalizeKey(k) {
     return k.toLowerCase().replace(/\s+/g, '')
         .replace('arrowleft', 'leftarrow').replace('arrowright', 'rightarrow')
         .replace('arrowup', 'uparrow').replace('arrowdown', 'downarrow')
-        .replace('pagedown', 'pagedown').replace('pageup', 'pageup');
+        .replace('spacebar', 'space');
 }
 
 function showPracticeAnswer() {
     const q = state.practiceQueue;
     const idx = state.practiceIndex % q.length;
-    const correct = q[idx].key;
-    document.getElementById('keyDisplay').innerHTML = `<span style="color:var(--accent)">${correct}</span>`;
+    const shortcut = q[idx];
+    const displayKey = getDisplayKey(shortcut);
+    document.getElementById('keyDisplay').innerHTML = `<span style="color:var(--accent)">${displayKey}</span>`;
     document.getElementById('keyDisplay').className = 'key-display';
     document.getElementById('practiceFeedback').textContent = 'Answer revealed';
     document.getElementById('practiceFeedback').className = 'practice-feedback';
@@ -1373,10 +1486,10 @@ function handleTypedAnswer() {
     const q = state.practiceQueue;
     const idx = state.practiceIndex % q.length;
     const shortcut = q[idx];
-    const correct = shortcut.key;
+    const displayKey = getDisplayKey(shortcut);
     const display = document.getElementById('keyDisplay');
     display.innerHTML = `<span>${typed}</span>`;
-    if (normalizeKey(typed) === normalizeKey(correct)) {
+    if (isCorrectKey(typed, shortcut)) {
         display.className = 'key-display correct';
         document.getElementById('practiceFeedback').textContent = 'Correct!';
         document.getElementById('practiceFeedback').className = 'practice-feedback correct';
@@ -1385,7 +1498,7 @@ function handleTypedAnswer() {
         markCorrect(shortcut.title);
     } else {
         display.className = 'key-display wrong';
-        document.getElementById('practiceFeedback').innerHTML = `Wrong — the answer is <strong>${correct}</strong>`;
+        document.getElementById('practiceFeedback').innerHTML = `Wrong — the answer is <strong>${displayKey}</strong>`;
         document.getElementById('practiceFeedback').className = 'practice-feedback wrong';
         state.practiceWrong++;
         document.getElementById('practiceWrong').textContent = state.practiceWrong;
@@ -1424,9 +1537,10 @@ function showQuizQuestion() {
     document.getElementById('quizProgressFill').style.width = ((state.quizIndex + 1) / state.quizQuestions.length * 100) + '%';
     document.getElementById('quizNext').style.display = 'none';
     state.quizAnswered = false;
-    const correctKey = current.key;
-    const wrongPool = SHORTCUTS.filter(s => s.key !== correctKey);
-    const wrongOptions = shuffle(wrongPool).slice(0, 3).map(s => s.key);
+    const correctKey = getShortcutKey(current);
+    const pool = getPlatformShortcuts();
+    const wrongPool = pool.filter(s => getShortcutKey(s) !== correctKey);
+    const wrongOptions = shuffle(wrongPool).slice(0, 3).map(s => getShortcutKey(s));
     const options = shuffle([correctKey, ...wrongOptions]);
     const container = document.getElementById('quizOptions');
     container.innerHTML = '';
@@ -1480,7 +1594,7 @@ function showQuizResults() {
             missed.slice(0, wrong).forEach(m => {
                 const div = document.createElement('div');
                 div.className = 'missed-item';
-                div.innerHTML = `<span>${m.title}</span><span class="shortcut-key">${m.key}</span>`;
+                div.innerHTML = `<span>${m.title}</span><span class="shortcut-key">${getDisplayKey(m)}</span>`;
                 missedContainer.appendChild(div);
             });
         }
@@ -1531,9 +1645,10 @@ function showSpeedQuestion() {
     document.getElementById('speedAction').textContent = current.title;
     const visContainer = document.getElementById('speedVisual');
     if (visContainer) visContainer.innerHTML = renderVisual(current.title);
-    const correctKey = current.key;
-    const wrongPool = SHORTCUTS.filter(s => s.key !== correctKey);
-    const wrongOptions = shuffle(wrongPool).slice(0, 3).map(s => s.key);
+    const correctKey = getShortcutKey(current);
+    const platformPool = getPlatformShortcuts();
+    const wrongPool = platformPool.filter(s => getShortcutKey(s) !== correctKey);
+    const wrongOptions = shuffle(wrongPool).slice(0, 3).map(s => getShortcutKey(s));
     const options = shuffle([correctKey, ...wrongOptions]);
     const container = document.getElementById('speedOptions');
     container.innerHTML = '';
@@ -1575,3 +1690,4 @@ function endSpeedRun() {
 
 // ===== BOOTSTRAP =====
 document.addEventListener('DOMContentLoaded', init);
+window.addEventListener('beforeunload', function () { SCORM.terminate(); });
